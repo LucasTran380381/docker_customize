@@ -12,3 +12,5 @@ services:
 networks:
   public:
     external: true
+volumes:
+  jenkins_home:
