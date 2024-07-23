@@ -2,7 +2,7 @@ services:
   jenkins:
     container_name: jenkins
     build: .
-    image: trannhan380381/jenkins_with_docker
+#    image: trannhan380381/jenkins_with_docker
     restart: always
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
