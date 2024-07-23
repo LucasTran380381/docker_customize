@@ -14,3 +14,4 @@ networks:
     external: true
 volumes:
   jenkins_home:
+    name: 'jenkins_home'
