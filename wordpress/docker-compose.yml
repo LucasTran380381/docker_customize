@@ -11,6 +11,8 @@ services:
       - MYSQL_DATABASE=wordpress
       - MYSQL_USER=wordpress
       - MYSQL_PASSWORD=wordpress
+    networks:
+      - wp_network
   wordpress:
     image: wordpress:latest
     container_name: wp
@@ -19,6 +21,7 @@ services:
     restart: always
     networks:
       - public
+      - wp_network
     environment:
       - WORDPRESS_DB_HOST=db
       - WORDPRESS_DB_USER=wordpress
@@ -30,3 +33,4 @@ volumes:
 networks:
   public:
     external: true
+  wp_network:
